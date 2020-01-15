@@ -3,12 +3,22 @@
     <div>
       <h2 class="text-3xl">Przepiśnik</h2>
     </div>
-    <div class="flex items-center">
-      <nav>
-        <ul class="flex">
-          <li class="text-white mx-2 text-xl">Śniadania</li>
-          <li class="text-white mx-2 text-xl">Obiady</li>
-          <li class="text-white mx-2 text-xl">Kolacje</li>
+    <div class="h-full flex items-center">
+      <nav class="h-full">
+        <ul class="h-full flex">
+          <li class="h-full flex items-center text-white mx-2 text-xl">
+            Śniadania
+          </li>
+          <li
+            class="h-full flex items-center text-white mx-2 text-xl text-gray-500"
+          >
+            Obiady
+          </li>
+          <li
+            class="h-full flex items-center text-white mx-2 text-xl text-gray-500"
+          >
+            Kolacje
+          </li>
         </ul>
       </nav>
       <search-input additionalClasses="bg-gray-600" />
