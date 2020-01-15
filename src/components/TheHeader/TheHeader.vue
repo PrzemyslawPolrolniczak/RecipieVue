@@ -3,7 +3,7 @@
     <div>
       <h2 class="text-3xl">Przepiśnik</h2>
     </div>
-    <div class="flex">
+    <div class="flex items-center">
       <nav>
         <ul class="flex">
           <li class="text-white mx-2 text-xl">Śniadania</li>
@@ -12,15 +12,18 @@
         </ul>
       </nav>
       <search-input additionalClasses="bg-gray-600" />
+      <the-button>Dodaj Przepis</the-button>
     </div>
   </header>
 </template>
 
 <script>
 import SearchInput from "../SearchInput/SearchInput.vue";
+import TheButton from "../shared/TheButton/TheButton.vue";
+
 export default {
   name: "TheHeader",
-  components: { SearchInput }
+  components: { SearchInput, TheButton }
 };
 </script>
 
