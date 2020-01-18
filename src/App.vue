@@ -1,18 +1,19 @@
 <template>
-  <div id="app">
+  <div id="app" class="h-screen overflow-hidden">
     <the-header></the-header>
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
+    <div class="flex h-full">
+      <left-sidebar />
+      <router-view />
     </div>
-    <router-view />
   </div>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader/TheHeader.vue";
+import LeftSidebar from "./components/LeftSidebar/LeftSidebar.vue";
+
 export default {
-  components: { TheHeader }
+  components: { TheHeader, LeftSidebar }
 };
 </script>
 
