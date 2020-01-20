@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-screen overflow-hidden">
+  <div id="app" class="h-screen pt-20">
     <the-header></the-header>
     <div class="flex h-full">
       <left-sidebar />
