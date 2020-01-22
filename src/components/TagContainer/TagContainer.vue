@@ -1,17 +1,12 @@
 <template>
-  <div class="mt-4 p-2 h-64 bg-white rounded-lg">
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
-    <the-tag />
+  <div class="mt-4 p-2 h-56 bg-white rounded-lg">
+    <the-tag
+      v-for="tag in tagsList"
+      :value="tag"
+      :onTagClick="onTagClick"
+      :icon="tagIcon"
+      :key="tag"
+    />
   </div>
 </template>
 
@@ -20,6 +15,17 @@ import TheTag from "../TheTag/TheTag.vue";
 
 export default {
   name: "TagContainer",
-  components: { TheTag }
+  components: { TheTag },
+  props: {
+    tagsList: Array,
+    onTagClick: {
+      type: Function,
+      required: true
+    },
+    tagIcon: {
+      type: String,
+      required: true
+    }
+  }
 };
 </script>

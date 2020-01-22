@@ -13,7 +13,9 @@
 
 <script>
 import { reactive } from "@vue/composition-api";
+
 import FilterList from "../FilterList/FilterList.vue";
+
 import { MAX_KCAL, MAX_TIME } from "../../store/modules/filter/mutations-types";
 
 export default {
