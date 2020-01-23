@@ -1,6 +1,10 @@
 <template>
   <div class="right-sidebar p-8 flex flex-col">
-    <the-input class="w-full" />
+    <input
+      class="rounded-full px-4 block leading-loose w-full"
+      v-model="search"
+      type="text"
+    />
     <tag-container
       :onTagClick="addFilterTag"
       :tagsList="availableTags"
@@ -16,9 +20,8 @@
 </template>
 
 <script>
-import { computed } from "@vue/composition-api";
+import { computed, ref } from "@vue/composition-api";
 
-import TheInput from "../shared/TheInput/TheInput.vue";
 import TagContainer from "../TagContainer/TagContainer.vue";
 import FavouritesList from "../FavouritesList/FavouritesList.vue";
 
@@ -30,15 +33,17 @@ import {
 
 export default {
   name: "RightSidebar",
-  components: { TheInput, TagContainer, FavouritesList },
+  components: { TagContainer, FavouritesList },
   setup(props, { root: { $store } }) {
-    const availableTags = computed(() => {
-      return $store.state.filter.availableTags;
-    });
+    const search = ref("");
 
-    const selectedTags = computed(() => {
-      return $store.state.filter.selectedTags;
-    });
+    const availableTags = computed(() =>
+      $store.state.filter.availableTags.filter(tag =>
+        tag.toLowerCase().includes(search.value)
+      )
+    );
+
+    const selectedTags = computed(() => $store.state.filter.selectedTags);
 
     const addFilterTag = value => {
       $store.commit(UPDATE_FILTERS, { type: ADD_TAGS, payload: value });
@@ -48,7 +53,13 @@ export default {
       $store.commit(UPDATE_FILTERS, { type: REMOVE_TAGS, payload: value });
     };
 
-    return { availableTags, selectedTags, addFilterTag, removeFilterTag };
+    return {
+      search,
+      availableTags,
+      selectedTags,
+      addFilterTag,
+      removeFilterTag
+    };
   }
 };
 </script>

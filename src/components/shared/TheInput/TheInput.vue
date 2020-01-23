@@ -4,6 +4,9 @@
 
 <script>
 export default {
-  name: "TheInput"
+  name: "TheInput",
+  props: {
+    "v-model": String
+  }
 };
 </script>
