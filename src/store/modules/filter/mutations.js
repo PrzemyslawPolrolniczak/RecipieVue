@@ -18,10 +18,6 @@ export default {
       case ADD_TAGS:
         state.availableTags = state.availableTags.filter(tag => tag != payload);
         state.selectedTags.push(payload);
-        console.log("ss");
-
-        console.log(state.selectedTags);
-
         break;
       case REMOVE_TAGS:
         state.selectedTags = state.selectedTags.filter(tag => tag != payload);

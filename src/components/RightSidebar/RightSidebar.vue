@@ -1,5 +1,5 @@
 <template>
-  <div class="right-sidebar p-8 flex flex-col">
+  <div class="right-sidebar p-8">
     <input
       class="rounded-full px-4 block leading-loose w-full"
       v-model="search"
@@ -67,5 +67,6 @@ export default {
 <style lang="scss" scoped>
 .right-sidebar {
   width: 320px;
+  height: calc(100vh - 80px);
 }
 </style>

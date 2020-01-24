@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-4 p-2 h-56 bg-white rounded-lg">
+  <div class="mt-4 p-2 h-20vh bg-white rounded-lg">
     <the-tag
       v-for="tag in tagsList"
       :value="tag"
