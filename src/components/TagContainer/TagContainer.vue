@@ -1,6 +1,6 @@
 <template>
   <div class="mt-4 p-2 h-20vh bg-white rounded-lg">
-    <the-tag
+    <base-tag
       v-for="tag in tagsList"
       :value="tag"
       :onTagClick="onTagClick"
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import TheTag from "../TheTag/TheTag.vue";
+import BaseTag from "../BaseTag/BaseTag.vue";
 
 export default {
   name: "TagContainer",
-  components: { TheTag },
+  components: { BaseTag },
   props: {
     tagsList: Array,
     onTagClick: {
