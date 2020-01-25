@@ -1,5 +1,7 @@
 <template>
-  <header class="header flex px-4 items-center justify-between">
+  <header
+    class="header flex px-4 items-center justify-between absolute left-0 right-0 top-0"
+  >
     <div>
       <h2 class="text-3xl">Przepiśnik</h2>
     </div>

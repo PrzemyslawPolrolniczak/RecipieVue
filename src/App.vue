@@ -1,9 +1,12 @@
 <template>
-  <div id="app" class="h-screen overflow-hidden">
+  <div id="app" class="h-screen pt-20">
     <the-header></the-header>
     <div class="flex h-full">
       <left-sidebar />
-      <router-view />
+      <div class="bg-white flex-grow">
+        <router-view />
+      </div>
+      <right-sidebar />
     </div>
   </div>
 </template>
@@ -11,9 +14,10 @@
 <script>
 import TheHeader from "./components/TheHeader/TheHeader.vue";
 import LeftSidebar from "./components/LeftSidebar/LeftSidebar.vue";
+import RightSidebar from "./components/RightSidebar/RightSidebar.vue";
 
 export default {
-  components: { TheHeader, LeftSidebar }
+  components: { TheHeader, LeftSidebar, RightSidebar }
 };
 </script>
 
