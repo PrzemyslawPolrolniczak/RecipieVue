@@ -24,7 +24,7 @@ export default {
   components: { FavouriteTile },
   setup(props, { root: { $store } }) {
     const favouriteRecipies = computed(() => $store.state.favourites.recipies);
-    console.log(favouriteRecipies.value[0].image);
+
     return { favouriteRecipies };
   }
 };

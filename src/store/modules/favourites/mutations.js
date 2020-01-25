@@ -11,7 +11,7 @@ export default {
         state.recipies.push(payload);
         break;
       case REMOVE_FAVOURITE:
-        state.recipies = state.recipies.filter(recipie => recipie != payload);
+        state.recipies = state.recipies.filter(({ name }) => name != payload);
         break;
     }
   }
