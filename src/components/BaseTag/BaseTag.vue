@@ -8,7 +8,11 @@
     >
       <font-awesome-icon :icon="icon" />
     </div>
-    <div class="flex items-center justify-center pl-1 pr-2 uppercase text-xxs font-bold">{{ value }}</div>
+    <div
+      class="flex items-center justify-center pl-1 pr-2 uppercase text-xxs font-bold"
+    >
+      {{ value }}
+    </div>
   </div>
 </template>
 

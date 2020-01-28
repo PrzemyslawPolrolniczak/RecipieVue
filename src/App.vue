@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="h-screen pt-20">
     <the-header></the-header>
-    <div class="flex h-full">
+    <div class="h-full">
       <left-sidebar />
-      <div class="bg-white flex-grow">
+      <div class="app__content h-full bg-white overflow-y-auto">
         <router-view />
       </div>
       <right-sidebar />
@@ -36,5 +36,10 @@ export default {
 
 * {
   box-sizing: border-box;
+}
+
+.app__content {
+  margin-left: 80px;
+  margin-right: 320px;
 }
 </style>

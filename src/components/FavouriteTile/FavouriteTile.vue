@@ -31,7 +31,7 @@
 import {
   UPDATE_FAVOURITES,
   REMOVE_FAVOURITE
-} from "../../store/modules/favourites/mutations-types";
+} from "@/store/modules/favourites/mutations-types";
 
 export default {
   name: "FavouriteTile",
