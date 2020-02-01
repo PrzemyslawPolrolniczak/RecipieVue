@@ -1,64 +1,70 @@
 <template>
-  <div
-    class="recipie-tile border rounded-lg flex flex-col w-64 shadow-md mx-4 my-4"
-  >
-    <div class="h-1/2">
-      <img
-        class="object-cover w-full h-full rounded-t-lg"
-        :src="image"
-        :alt="name"
-      />
-    </div>
-    <div class="h-1/2 p-4 text-gray-700">
-      <h3 class="text-xl font-bold pb-4 leading-none truncate">
-        {{ name }}
-      </h3>
-      <div>
-        <div class="flex justify-between text-sm">
-          <span>
-            Kaloryczność:
-            <strong>{{ info.kcal }} kcal</strong>
-          </span>
-          <span>
-            B:
-            <strong>{{ macro.protein }}g</strong>
-          </span>
+  <router-link :to="`/recipie/${slug}`">
+    <div
+      class="recipie-tile border rounded-lg flex flex-col w-64 shadow-md mx-4 my-4"
+    >
+      <div class="h-1/2">
+        <img
+          class="object-cover w-full h-full rounded-t-lg"
+          :src="image"
+          :alt="name"
+        />
+      </div>
+      <div class="h-1/2 p-4 text-gray-700">
+        <h3 class="text-xl font-bold pb-4 leading-none truncate">
+          {{ name }}
+        </h3>
+        <div>
+          <div class="flex justify-between text-sm">
+            <span>
+              Kaloryczność:
+              <strong>{{ info.kcal }} kcal</strong>
+            </span>
+            <span>
+              B:
+              <strong>{{ macro.protein }}g</strong>
+            </span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span>
+              Czas:
+              <strong>{{ info.time }} min</strong>
+            </span>
+            <span>
+              T:
+              <strong>{{ macro.fat }}g</strong>
+            </span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span>
+              Trudność:
+              <strong>{{ info.difficulty }}</strong>
+            </span>
+            <span>
+              W:
+              <strong>{{ macro.carb }}g</strong>
+            </span>
+          </div>
         </div>
-        <div class="flex justify-between text-sm">
-          <span>
-            Czas:
-            <strong>{{ info.time }} min</strong>
-          </span>
-          <span>
-            T:
-            <strong>{{ macro.fat }}g</strong>
-          </span>
-        </div>
-        <div class="flex justify-between text-sm">
-          <span>
-            Trudność:
-            <strong>{{ info.difficulty }}</strong>
-          </span>
-          <span>
-            W:
-            <strong>{{ macro.carb }}g</strong>
-          </span>
+        <div class="flex text-xs pt-4">
+          <div
+            class="border border-gray-600 rounded text-center px-2 mt-1 mr-2 capitalize"
+            v-for="tag in tags"
+            :key="tag"
+          >
+            {{ tag }}
+          </div>
         </div>
       </div>
-      <div class="flex text-xs pt-4">
-        <div
-          class="border border-gray-600 rounded text-center px-2 mt-1 mr-2 capitalize"
-          v-for="tag in tags"
-          :key="tag"
-        >
-          {{ tag }}
-        </div>
-      </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
+import { computed } from "@vue/composition-api";
+
+import { convertToSlug } from "@/utils";
+
 export default {
   name: "RecipieTile",
   props: {
@@ -89,6 +95,12 @@ export default {
       validator: tags => tags.length <= 3,
       default: () => []
     }
+  },
+  setup(props) {
+    const { name } = props;
+    const slug = computed(() => convertToSlug(name));
+
+    return { slug };
   }
 };
 </script>

@@ -20,3 +20,5 @@ export const sortArrayOfObjects = (array, sortBy, order) => {
 
   return array.sort(compareObjectValues(sortBy, order));
 };
+
+export const convertToSlug = text => text.toLowerCase().replace(/\s/g, "_");

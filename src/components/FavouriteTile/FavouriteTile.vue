@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="`/recipie/${name}`">
+  <router-link :to="`/recipie/${slug}`">
     <div
       class="favourite-tile rounded-lg border border-gray-500 flex h-12 mb-4 cursor-pointer relative"
     >
@@ -28,6 +28,9 @@
 </template>
 
 <script>
+import { computed } from "@vue/composition-api";
+
+import { convertToSlug } from "@/utils";
 import {
   UPDATE_FAVOURITES,
   REMOVE_FAVOURITE
@@ -54,13 +57,16 @@ export default {
     }
   },
   setup({ name }, { root: { $store } }) {
+    const slug = computed(() => convertToSlug(name));
+
     const removeFavourite = () => {
       $store.commit(UPDATE_FAVOURITES, {
         type: REMOVE_FAVOURITE,
         payload: name
       });
     };
-    return { removeFavourite };
+
+    return { slug, removeFavourite };
   }
 };
 </script>
