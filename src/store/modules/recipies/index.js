@@ -19,7 +19,7 @@ export default {
           fat: 15,
           carb: 15
         },
-        tags: ["Ciepłe", "Śniadanie", "Bez mięsa"]
+        tags: ["ciepłe", "śniadanie", "bez mięsa"]
       },
       {
         image:
@@ -35,7 +35,7 @@ export default {
           fat: 15,
           carb: 15
         },
-        tags: ["Ciepłe", "Śniadanie", "Bez mięsa"]
+        tags: ["ciepłe", "śniadanie", "bez mięsa"]
       },
       {
         image:
@@ -51,7 +51,7 @@ export default {
           fat: 15,
           carb: 15
         },
-        tags: ["Ciepłe", "Śniadanie", "Bez mięsa"]
+        tags: ["ciepłe", "śniadanie", "bez mięsa"]
       }
     ]
   },

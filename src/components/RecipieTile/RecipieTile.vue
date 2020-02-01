@@ -47,7 +47,7 @@
       </div>
       <div class="flex text-xs pt-4">
         <div
-          class="border border-gray-600 rounded text-center px-2 mt-1 mr-2"
+          class="border border-gray-600 rounded text-center px-2 mt-1 mr-2 capitalize"
           v-for="tag in tags"
           :key="tag"
         >

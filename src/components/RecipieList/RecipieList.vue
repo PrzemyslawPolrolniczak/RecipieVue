@@ -23,7 +23,7 @@ export default {
   name: "RecipieList",
   components: { RecipieTile },
   setup(props, { root: { $store } }) {
-    const recipies = computed(() => $store.getters.sortedRecipies);
+    const recipies = computed(() => $store.getters.filteredAndSortedRecipies);
 
     return { recipies };
   }

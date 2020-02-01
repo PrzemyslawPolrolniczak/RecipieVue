@@ -32,7 +32,7 @@
         </ul>
       </div>
     </span>
-    <span>Total: 1450</span>
+    <span>Total: {{ totalRecipiesCount }}</span>
   </div>
 </template>
 
@@ -70,12 +70,17 @@ export default {
       $store.commit(UPDATE_RECIPIES, { type: SET_SORTING, payload: option });
     };
 
+    const totalRecipiesCount = computed(
+      () => $store.getters.totalRecipiesCount
+    );
+
     return {
       data,
       selectedSorting,
       toggleSortingExpanded,
       sortingOptions,
-      changeSortingOption
+      changeSortingOption,
+      totalRecipiesCount
     };
   }
 };
