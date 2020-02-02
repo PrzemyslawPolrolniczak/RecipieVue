@@ -1,5 +1,5 @@
 <template>
-  <div class="left-sidebar">
+  <div class="left-sidebar fixed top-0 bottom-0 pt-20">
     <filter-list
       v-for="{ type, storeField, name, values } in state.filtersList"
       :type="type"
@@ -16,7 +16,7 @@ import { computed } from "@vue/composition-api";
 
 import FilterList from "../FilterList/FilterList.vue";
 
-import { MAX_KCAL, MAX_TIME } from "../../store/modules/filter/mutations-types";
+import { MAX_KCAL, MAX_TIME } from "@/store/modules/filter/mutations-types";
 
 export default {
   name: "LeftSidebar",

@@ -24,18 +24,18 @@
         </ul>
       </nav>
       <search-input additionalClasses="bg-gray-600" />
-      <the-button>Dodaj Przepis</the-button>
+      <base-button>Dodaj Przepis</base-button>
     </div>
   </header>
 </template>
 
 <script>
 import SearchInput from "../SearchInput/SearchInput.vue";
-import TheButton from "../shared/TheButton/TheButton.vue";
+import BaseButton from "../shared/BaseButton/BaseButton.vue";
 
 export default {
   name: "TheHeader",
-  components: { SearchInput, TheButton }
+  components: { SearchInput, BaseButton }
 };
 </script>
 

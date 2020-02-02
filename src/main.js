@@ -8,12 +8,13 @@ import {
   faSearch,
   faPlus,
   faMinus,
-  faTrash
+  faTrash,
+  faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import "./assets/tailwind.css";
 
-library.add(faSearch, faPlus, faMinus, faTrash);
+library.add(faSearch, faPlus, faMinus, faTrash, faChevronDown);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.use(VueCompositionApi);

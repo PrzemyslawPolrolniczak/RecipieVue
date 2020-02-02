@@ -1,21 +1,23 @@
 <template>
-  <div class="right-sidebar p-8">
-    <input
-      class="rounded-full px-4 block leading-loose w-full"
-      v-model="search"
-      type="text"
-    />
-    <tag-container
-      :onTagClick="addFilterTag"
-      :tagsList="availableTags"
-      tagIcon="plus"
-    />
-    <tag-container
-      :onTagClick="removeFilterTag"
-      :tagsList="selectedTags"
-      tagIcon="minus"
-    />
-    <favourites-list />
+  <div class="pt-20 fixed top-0 bottom-0 right-0">
+    <div class="right-sidebar p-8">
+      <input
+        class="rounded-full px-4 block leading-loose w-full"
+        v-model="search"
+        type="text"
+      />
+      <tag-container
+        :onTagClick="addFilterTag"
+        :tagsList="availableTags"
+        tagIcon="plus"
+      />
+      <tag-container
+        :onTagClick="removeFilterTag"
+        :tagsList="selectedTags"
+        tagIcon="minus"
+      />
+      <favourites-list />
+    </div>
   </div>
 </template>
 
@@ -29,7 +31,7 @@ import {
   UPDATE_FILTERS,
   ADD_TAGS,
   REMOVE_TAGS
-} from "../../store/modules/filter/mutations-types";
+} from "@/store/modules/filter/mutations-types";
 
 export default {
   name: "RightSidebar",
@@ -67,6 +69,5 @@ export default {
 <style lang="scss" scoped>
 .right-sidebar {
   width: 320px;
-  height: calc(100vh - 80px);
 }
 </style>

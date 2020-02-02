@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "TheTag",
+  name: "BaseTag",
   props: {
     value: {
       type: String,

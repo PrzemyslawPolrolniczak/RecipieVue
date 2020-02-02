@@ -18,7 +18,7 @@
 <script>
 import { computed } from "@vue/composition-api";
 
-import { UPDATE_FILTERS } from "../../store/modules/filter/mutations-types";
+import { UPDATE_FILTERS } from "@/store/modules/filter/mutations-types";
 
 export default {
   name: "FilterList",
