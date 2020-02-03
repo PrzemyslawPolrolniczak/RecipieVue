@@ -1,7 +1,7 @@
 import { sortArrayOfObjects, convertToSlug } from "@/utils";
 
 describe("convertToSlug", () => {
-  it("Converts text to slug", () => {
+  test("Converts text to slug", () => {
     const text = "Some generic recipie name";
     const slug = convertToSlug(text);
 
@@ -30,7 +30,7 @@ describe("sortArrayOfObjects", () => {
     }
   ];
 
-  it("Sorts array of objects by string", () => {
+  test("Sorts array of objects by string", () => {
     const sortedTestObjects = sortArrayOfObjects(testObjects, "string", "asc");
 
     expect(sortedTestObjects[0].string).toBe("ABC");
@@ -38,7 +38,7 @@ describe("sortArrayOfObjects", () => {
     expect(sortedTestObjects[2].string).toBe("GHI");
   });
 
-  it("Sorts array of objects by number", () => {
+  test("Sorts array of objects by number", () => {
     const sortedTestObjects = sortArrayOfObjects(testObjects, "number", "asc");
 
     expect(sortedTestObjects[0].number).toBe(1);
@@ -46,7 +46,7 @@ describe("sortArrayOfObjects", () => {
     expect(sortedTestObjects[2].number).toBe(3);
   });
 
-  it("Sorts array of objects by boolean", () => {
+  test("Sorts array of objects by boolean", () => {
     const sortedTestObjects = sortArrayOfObjects(testObjects, "boolean", "asc");
 
     expect(sortedTestObjects[0].boolean).toBe(false);
@@ -54,7 +54,7 @@ describe("sortArrayOfObjects", () => {
     expect(sortedTestObjects[2].boolean).toBe(true);
   });
 
-  it("Sorts array in correct order when param is passed", () => {
+  test("Sorts array in correct order when param is passed", () => {
     const sortedTestObjects = sortArrayOfObjects(testObjects, "number", "desc");
 
     expect(sortedTestObjects[0].number).toBe(3);
