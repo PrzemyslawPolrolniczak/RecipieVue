@@ -4,7 +4,7 @@ export default {
   sortedRecipies: state => {
     const {
       items,
-      sorting: { by, direction }
+      currentSorting: { by, direction }
     } = state;
     return sortArrayOfObjects(items, by, direction);
   },

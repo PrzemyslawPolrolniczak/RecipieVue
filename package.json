@@ -40,6 +40,7 @@
     "sass-loader": "^8.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "vue-cli-plugin-tailwind": "^1.1.0",
+    "vue-cli-plugin-test-attrs": "^0.1.4",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
