@@ -6,10 +6,10 @@ import BaseTag from "@/components/BaseTag/BaseTag.vue";
 const localVue = createLocalVue();
 localVue.component("font-awesome-icon", FontAwesomeIcon);
 
-describe("BaseTag.vue", () => {
-  const clickHandler = jest.fn();
-  const propsData = { value: "test", icon: "plus", onTagClick: clickHandler };
+const clickHandler = jest.fn();
+const propsData = { value: "test", icon: "plus", onTagClick: clickHandler };
 
+describe("BaseTag.vue", () => {
   const wrapper = shallowMount(BaseTag, {
     localVue,
     propsData
