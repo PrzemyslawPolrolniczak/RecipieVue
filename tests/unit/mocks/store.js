@@ -5,7 +5,8 @@ const {
     CURRENT_SORTING: { TEXT },
     SORTING_OPTIONS
   },
-  FAVOUTIRES: { RECIPIES }
+  FAVOUTIRES: { RECIPIES },
+  FILTER: { MAX_KCAL, MAX_TIME, AVAILABLE_TAGS, SELECTED_TAGS }
 } = STATE;
 
 const { TOTAL_RECIPIES_COUNT } = GETTERS;
@@ -20,6 +21,12 @@ export const $store = {
     },
     favourites: {
       recipies: RECIPIES
+    },
+    filter: {
+      maxKcal: MAX_KCAL,
+      maxTime: MAX_TIME,
+      availableTags: AVAILABLE_TAGS,
+      selectedTags: SELECTED_TAGS
     }
   },
   getters: {
