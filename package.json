@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --verbose",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
   },
@@ -40,6 +40,7 @@
     "sass-loader": "^8.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "vue-cli-plugin-tailwind": "^1.1.0",
+    "vue-cli-plugin-test-attrs": "^0.1.4",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -81,6 +82,11 @@
     "last 2 versions"
   ],
   "jest": {
-    "preset": "@vue/cli-plugin-unit-jest"
+    "preset": "@vue/cli-plugin-unit-jest",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/src/**/*.{js,vue}",
+      "!**/node_modules/**"
+    ]
   }
 }

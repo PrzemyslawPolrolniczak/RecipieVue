@@ -8,18 +8,20 @@
           class="object-cover h-full rounded-l-lg"
           :src="image"
           :alt="name"
+          data-test="image"
         />
       </div>
       <div class="w-3/4 flex flex-col justify-center px-4">
-        <div class="text-xs font-bold">{{ name }}</div>
+        <div class="text-xs font-bold" data-test="name">{{ name }}</div>
         <div class="flex">
-          <div class="w-1/2 text-xs">{{ kcal }} kcal</div>
-          <div class="w-1/2 text-xs">{{ time }} min</div>
+          <div class="w-1/2 text-xs" data-test="kcal">{{ kcal }} kcal</div>
+          <div class="w-1/2 text-xs" data-test="time">{{ time }} min</div>
         </div>
       </div>
       <div
         class="favourite-tile__delete absolute"
         @click.prevent="removeFavourite()"
+        data-test="delete-icon"
       >
         <font-awesome-icon icon="trash" class="text-gray-700 text-sm" />
       </div>

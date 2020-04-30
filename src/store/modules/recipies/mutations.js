@@ -4,7 +4,7 @@ export default {
   [UPDATE_RECIPIES]: (state, { type, payload }) => {
     switch (type) {
       case SET_SORTING:
-        state.sorting = payload;
+        state.currentSorting = payload;
         break;
     }
   }
