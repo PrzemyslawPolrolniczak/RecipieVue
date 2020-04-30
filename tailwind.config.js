@@ -14,9 +14,15 @@ module.exports = {
         "40vh": "40vh",
         "50vh": "50vh",
         "1/2": "50%"
+      },
+      colors: {
+        "theme-black": "#040405"
       }
     }
   },
   variants: {},
   plugins: []
 };
+
+// font-family: 'Lato', sans-serif;
+// font-family: 'Lora', serif;
