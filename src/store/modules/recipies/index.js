@@ -3,7 +3,15 @@ import getters from "./getters";
 
 export default {
   state: {
-    sorting: { by: "name", direction: "asc", text: "A-z" },
+    sortingOptions: [
+      { by: "name", direction: "asc", text: "A-z" },
+      { by: "name", direction: "desc", text: "z-A" },
+      { by: "kcal", direction: "asc", text: "Kcal+" },
+      { by: "kcal", direction: "desc", text: "Kcal-" },
+      { by: "time", direction: "asc", text: "Time+" },
+      { by: "time", direction: "desc", text: "Time-" }
+    ],
+    currentSorting: { by: "name", direction: "asc", text: "A-z" },
     items: [
       {
         image:

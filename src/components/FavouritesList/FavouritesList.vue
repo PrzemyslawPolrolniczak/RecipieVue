@@ -9,6 +9,7 @@
         :image="image"
         :kcal="kcal"
         :time="time"
+        data-test="favourite-tile"
       />
     </div>
   </div>
