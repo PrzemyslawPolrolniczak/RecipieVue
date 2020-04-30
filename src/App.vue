@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="h-screen pt-20">
-    <the-header></the-header>
+    <the-header />
     <div class="h-full">
       <left-sidebar />
       <div class="app__content h-full bg-white overflow-y-auto">
